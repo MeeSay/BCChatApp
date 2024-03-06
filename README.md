@@ -12,3 +12,6 @@ Build your first web3 API start-up, in which you can provide users to upload the
   + git add .
   + git commit -m "<tên phần mình sửa>" (ví dụ: git commit -m "Thêm nút add friend" (khuyến khích ghi tiếng Anh)).
   + git push <tên branch>.
+- Khi đã clone, ae muốn cập nhật cái mà đồng đội mình vừa hoàn thành.
+  + git pull
+  + đổi về branch của mình.
