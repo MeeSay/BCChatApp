@@ -17,7 +17,7 @@ const NavBar = () => {
     },
     {
       menu:"CHAT",
-      link: "/",
+      link: "Chat",
      },
      {
       menu:"SETTING",
@@ -43,21 +43,21 @@ const NavBar = () => {
 
   const {account, userName, connectWallet} = useContext(ChatAppContext)
   return (
-  <div className={Style.NarBar}>
-    <div className={Style.NarBar_box}>    
-    <div className={Style.NarBar_box_left} >
+  <div className={Style.NavBar}>
+    <div className={Style.NavBar_box}>    
+    <div className={Style.NavBar_box_left} >
       <Image src={images.logo} alt="logo" width={50} height ={50}/> 
     </div>
-    <div className={Style.NarBar_box_right} >
+    <div className={Style.NavBar_box_right} >
       {/* DESKTOP */}
-      <div className={Style.NarBar_box_right_menu} >
+      <div className={Style.NavBar_box_right_menu} >
         {menuItems.map((el, i) =>(
           <div 
           onClick={()=> setActive(i + 1)} 
           key = { 1 + 1 } 
-          className ={`${Style.NarBar_box_right_menu_items} ${active == i + 1 ? Style.active_btn :""}`}
+          className ={`${Style.NavBar_box_right_menu_items} ${active == i + 1 ? Style.active_btn :""}`}
           >
-            <Link className={Style.NarBar_box_right_menu_items_link }
+            <Link className={Style.NavBar_box_right_menu_items_link }
             href={el.link}
             >
                {el.menu}
@@ -95,7 +95,7 @@ const NavBar = () => {
       )}
 
       {/* CONNECT WALLET */}
-      <div className={Style.NarBar_box_right_connect}>
+      <div className={Style.NavBar_box_right_connect}>
         {account == "" ?(
           <button onClick={()=> connectWallet()}>
             {""}
@@ -117,7 +117,7 @@ const NavBar = () => {
       </div>
 
       <div 
-        className={Style.NarBar_box_right_open}
+        className={Style.NavBar_box_right_open}
         onClick={() => setOpen(true)}
       >
         <Image src ={images.open} alt="open" width={30} height={30} />
